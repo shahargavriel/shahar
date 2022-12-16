@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>התחברות</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script defer src="../static/js/pages_validation.js"></script>
+</head>
+
+<body dir="rtl">
+    <div class="page-container">
+        <header>
+            <a id="logIn" href="../views/sign_in.html" class="top-line-left">התחברות</a>
+            <nav>
+                <a href="../views/home_page.html" class="navline">דף הבית</a>
+                <a href="../views/sign_up.html" class="navline">הצטרפות </a>
+                <a href="../views/about_us.html" class="navline">קצת עלינו</a>
+                <a href="../views/contact.html" class="navline">צור קשר</a>
+            </nav>
+        </header>
+
+        <div class="page-details">
+            <section class="sign-page">
+                <h2>התחברות לאתר</h2><br>
+                <form action="user_page.html" method="post">
+                    <label for="user_name" >שם משתמש</label><br>
+                    <input type="text" id="user_name" name="user_name" required/><!--place to put input-->
+                    <p id="username-error"></p>
+                    <label for="Password">סיסמה</label><br>
+                    <input type="password" id="Password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="הסיסמה חייבת להכיל לפחות ספרה אחת ואות גדולה וקטנה אחת, ולפחות 8 תווים או יותר" required/><br>
+                    <!--if there is problem with the password will be note-->
+                    <p id="pass-error"></p>
+                    <button type="submit" class="button">התחבר/י</button><br><br>
+                </form>
+                <a id="signUp" href="sign_up.html">להרשמה לחצ/י כאן</a>
+            </section>
+        </div>
+        
+
+        <footer class="general-footer">
+            <div class="general-footer-container">
+                <ul>
+                    <li class="titles">עקבו אחרינו</li>
+                    <li><a href=""><i class="fa fa-facebook"></i>  פייסבוק</a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i>     אינסטגרם</a></li>
+                </ul>
+                <ul>
+                    <li class="titles">דברו איתנו</li>
+                    <li><i class="fa fa-phone"></i>  052-2222221</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:keepintouch@office.co.il" class="originalLink"> keepintouch@office.co.il </a></li>
+                </ul>
+                <img id="logo" src='../static/images/site-logo.png' alt="website's logo"/>
+            </div>
+
+        </footer>
+
+    </div>
+</body>
+</html>

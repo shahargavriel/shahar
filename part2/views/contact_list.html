@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--not show inside the page-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>אנשי הקשר שלי</title>
+    <link rel="stylesheet" href="../static/css/style.css"><!--conact with style.css page-->
+    <link rel="icon" href="../static/images/icon.png"><!--show picture near the title-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script defer src="../static/js/pages_validation.js"></script> <!--conact to js page-->
+</head>
+
+<body  dir="rtl">
+    <div class="page-container">
+        <header>
+            <a id="logIn" href="../views/sign_in.html" class="top-line-left">התנתקות</a>
+            <nav><!--navigation manue-->
+                <a href="../views/user_page.html" class="navline">הפרופיל שלי</a>
+                <a href="../views/about_us.html" class="navline">קצת עלינו</a>
+                <a href="../views/contact.html" class="navline">צור קשר</a>
+            </nav>
+        </header>
+
+        <div class="page-details">
+            <h2>החברים שלי</h2><!--title of the page-->
+
+            <table id="contact_table">
+                <!--the table will be full from DB next part-->
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>שם איש קשר</td>
+                        <td>מספר טלפון</td>
+                        <td>מייל</td>
+                        <td>מידת קירבה</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <!--if you stand on the "+" you will see the title-->
+                        <td>מאור גואטה</td>
+                        <td>0529210858</td>
+                        <td>maor@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td> אבא</td>
+                        <td> 0525223222</td>
+                        <td>eli@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>אמא </td>
+                        <td> 0525223232</td>
+                        <td>talia@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>יובל גבריאל </td>
+                        <td> 052523203</td>
+                        <td>yuval@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td> רועי גבריאל</td>
+                        <td> 0525223202</td>
+                        <td>roei@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>נדב זיו </td>
+                        <td> 0523212222</td>
+                        <td>nadav@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>אביה כהן </td>
+                        <td> 0521113334</td>
+                        <td>avia@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>שחף לוי </td>
+                        <td> 0524487651</td>
+                        <td>shahaf@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>אור מכינה </td>
+                        <td> 0547896543</td>
+                        <td>or@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>ג'ולי גואטה</td>
+                        <td> 0546671671</td>
+                        <td>july@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>ליאור פרץ</td>
+                        <td> 0522919079</td>
+                        <td>lior@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>דני זוקו</td>
+                        <td> 0505234567</td>
+                        <td>dani@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>דנה זרמון</td>
+                        <td> 0512345678</td>
+                        <td>maor@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                    <td>יהלי גואטה</td>
+                    <td> 0546671671</td>
+                    <td>yahli@gmail.com</td>
+                    <td>
+                        <select name="closeness" id="closeness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                    <td>בר זומר</td>
+                    <td> 0598765432</td>
+                    <td>bar@gmail.com</td>
+                    <td>
+                        <select name="closeness" id="closeness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                    <td> אסי עזר</td>
+                    <td> 0522223334</td>
+                    <td>asi@gmail.com</td>
+                    <td>
+                        <select name="closeness" id="closeness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                    <td>רותם סלע</td>
+                    <td> 0545554442</td>
+                    <td>rotem@gmail.com</td>
+                    <td>
+                        <select name="closeness" id="closeness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr class="hidethis" style="display:none;">
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>קורל סימנוביץ</td>
+                        <td> 0507778889</td>
+                        <td>corak@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr class="hidethis" style="display:none;">
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>ניב סולטן </td>
+                        <td> 0546667778</td>
+                        <td>niv@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td> אמיר דדון</td>
+                        <td> 0509998886</td>
+                        <td>amir@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr class="hidethis" style="display:none;">
+                        <td><a href="../views/person_page.html" class="fa fa-eye" title="הצג אירועי איש קשר"></a></td>
+                        <td>עידן עמדי</td>
+                        <td> 0523023023</td>
+                        <td>idan@gmail.com</td>
+                        <td>
+                            <select name="closeness" id="closeness">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"><input type="button" id="more_less_span" class="button" value="הצג עוד" onclick="show_more_less()"></td>
+                        <!--buttom conact to JS function to show more/ less pepole in the table-->
+                    </tr>
+                </tfoot>
+            </table>
+
+
+            <a id="redirect_page" href="contact_list.html">
+                <button class="button">שמור</button>
+            </a>
+        </div>
+    <!--the lowest part in the page-->
+        <footer class="general-footer">
+            <div class="general-footer-container">
+                <ul>
+                    <li class="titles">עקבו אחרינו</li>
+                    <li><a href=""><i class="fa fa-facebook"></i>  פייסבוק</a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i>     אינסטגרם</a></li>
+                </ul>
+                <ul>
+                    <li class="titles">דברו איתנו</li>
+                    <li><i class="fa fa-phone"></i>  052-2222221</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:keepintouch@office.co.il" class="originalLink"> keepintouch@office.co.il </a></li>
+                </ul>
+                <img id="logo" src='../static/images/site-logo.png' alt="website's logo"/>
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>

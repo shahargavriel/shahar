@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>אירועים</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="icon" href="../static/images/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <script defer src="../static/js/pages_validation.js"></script>
+    </head>
+
+    <body dir="rtl"> 
+        <div class="page-container">
+            <header>
+                <a id="logIn" href="../views/sign_in.html" class="top-line-left">התנתקות</a>
+                <nav>
+                    <a href="../views/user_page.html" class="navline">הפרופיל שלי</a>
+                    <a href="../views/about_us.html" class="navline">קצת עלינו</a>
+                    <a href="../views/contact.html" class="navline">צור קשר</a>
+                </nav>
+            </header>
+            
+            <div class="page-details">
+                <section class="sign-page">
+                    <h2>אירועים של החברים שלי</h2><br>
+                    <h3>הוסף אירוע</h3>
+                    <form action="ps_page.html" onsubmit="saved_event()" method="post">
+                        <div class="custom-select" align="center">
+
+                            <select id="selectEvent" required>
+                                <option value="">בחר איש קשר:</option>
+                                <option value="1">מאור גואטה</option>
+                                <option value="2">אבא</option>
+                                <option value="3">אמא</option>
+                                <option value="4">יובל גבריאל</option>
+                                <option value="5">רועי גבריאל</option>
+                                <option value="6">נדב זיו</option>
+                                <option value="7"> אביה כהן</option>
+                                <option value="8">שחף לוי</option>
+                                <option value="9">אור מכינה</option>
+                                <option value="10">ג'ולי גואטה</option>
+                                <option value="11">ליאור פרץ</option>
+                                <option value="12">דני זוקו</option>
+                                <option value="13">דנה זרמון </option>
+                                <option value="14">יהלי גואטה</option>
+                                <option value="15">בר זומר</option>
+                                <option value="16">אסי עזר</option>
+                                <option value="17">רותם סלע</option>
+                            </select><br>
+                            <input type="date" id="event-date" name="event-date" value="" style="background-color: lightgoldenrodyellow;" required><br>
+                            <!--show calender-->
+                            <select id="selectEvent" required>
+                                <option value=""> סוג אירוע:</option>
+                                <option value="1">יום הולדת</option>
+                                <option value="2">טיסה/ נסיעה</option>
+                                <option value="3">לידה</option>
+                                <option value="4">יום נישואים</option>
+                                <option value="5">אירוע בריאותי</option>
+                                <option value="6">מבחן</option>
+                                <option value="7">אחר</option>
+                            </select><br>
+                        </div>
+                        <button type="submit" class="button">שמור</button><br><br>
+                    </form>
+                </section>
+            </div>
+        
+            <footer class="general-footer">
+                <div class="general-footer-container">
+                    <ul>
+                        <li class="titles">עקבו אחרינו</li>
+                        <li><a href=""><i class="fa fa-facebook"></i>  פייסבוק</a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i>     אינסטגרם</a></li>
+                    </ul>
+                    <ul>
+                        <li class="titles">דברו איתנו</li>
+                        <li><i class="fa fa-phone"></i>  052-2222221</li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:keepintouch@office.co.il" class="originalLink"> keepintouch@office.co.il </a></li>
+                    </ul>
+                    <img id="logo" src='../static/images/site-logo.png' alt="website's logo"/>
+                </div>
+    
+            </footer>
+        </div>
+    </body>
+    </html>
