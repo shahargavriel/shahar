@@ -1,0 +1,23 @@
+extends mainLayout
+block content
+    section(class="sign-page")
+        p #{msg || ''}
+
+        form(action="/addEvent", method="post")
+            div(class="custom-select", align="center")
+                select(id="selectContact", name="selectContact", required="required")
+                    each c in contacts
+                        option(value=c.contact_email) #{c.contact_name}
+                br
+                input(type="date", id="event_date", name="event_date", value="", style="background-color: lightgoldenrodyellow;", required="required")
+                br
+                select(id="selectEvent", name="selectEvent", required="required")
+                    option(value="") סוג אירוע
+                    option(value="יום הולדת") יום הולדת
+                    option(value="מבחן") מבחן
+                    option(value="יום נישואים") יום נישואים
+                    option(value="אירוע בריאותי") אירוע בריאותי
+                    option(value="לידה") לידה
+                    option(value="טיסה/נסיעה") טיסה/נסיעה
+                    option(value="אחר") אחר 
+            button(type="submit", class="button") שמור

@@ -1,0 +1,16 @@
+extends mainLayout
+block content
+    if alert_msg 
+        p #{alert_msg}
+    section(class="sign-page")
+        form(action="/signInData", method="post")
+            label(for="user_name") שם משתמש
+            br
+            input(type="text", name="user_name", id="user_name", autocomplete="off", value=user_name || '', required="required")
+            p(id="username-error", style="font-weight: bold;") #{user_name_msg || ''}
+            label(for="Password") סיסמה
+            br
+            input(type="password", name="Password", id="Password", autocomplete="off", required="required")
+            p(id="pass-error", style="font-weight: bold;") #{pass_msg || ''}
+            button(type="submit", class="button") התחבר/י
+        a(id="signUp", href="/signUp")

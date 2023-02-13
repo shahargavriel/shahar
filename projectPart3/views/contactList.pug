@@ -1,0 +1,26 @@
+extends mainLayout
+block content
+    table(id="contact_table")
+        thead
+            tr
+                td
+                td שם איש קשר
+                td מספר טלפון
+                td מייל
+                td מידת קירבה
+        tbody
+        each c in contacts
+            tr
+                td
+                    a(href="/selectedPerson/"+c.contact_email, class="fa fa-eye", title="הצג פרטים ואירועים של איש קשר")
+                td= c.contact_name
+                td= c.phone_number
+                td= c.contact_email
+                td= c.closeness
+        tfoot
+            tr
+                td(colspan="5")
+                    input(type="button", id="more_less_span", class="button", value="הצג עוד", onclick="show_more_less()")
+    
+
+

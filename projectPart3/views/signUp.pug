@@ -1,0 +1,81 @@
+extends mainLayout
+block content
+    section(class="sign-page")
+        form(action="/signUpData", method="post")
+            label(for="Email") אימייל
+            br
+            if locals.userDetails
+                input(type="email", name="Email", id="Email", value=userDetails.email, required="required")
+            else
+                input(type="email", name="Email", id="Email", required="required")
+            p(id="email_error") #{email_err || ''}
+            label(for="fname") שם פרטי
+            br
+            if locals.userDetails
+                input(type="text", name="fname", id="fname", value=userDetails.first_name, required="required")
+            else
+                input(type="text", name="fname", id="fname", required="required")
+            p(id="fname-error") #{fname_err || ''}
+            label(for="lname") שם משפחה
+            br
+            if locals.userDetails
+                input(type="text", name="lname", id="lname", value=userDetails.last_name, required="required")
+            else
+                input(type="text", name="lname", id="lname", required="required")
+            p(id="lname-error") #{lname_err || ''}
+            label(for="user_name") שם משתמש
+            br
+            if locals.userDetails
+                input(type="text", name="user_name", id="user_name", value=userDetails.user_name, required="required")
+            else
+                input(type="text", name="user_name", id="user_name", required="required")
+            p(id="username-error") #{username_err || ''}
+            label(for="selectGender") מין
+            br
+            select(name="selectGender", id="selectGender", style="background-color: white;", required="required")
+                if locals.userDetails
+                    if userDetails.gender == "זכר"
+                        option(value='')
+                        option(value='זכר', selected=true) זכר
+                        option(value='נקבה') נקבה
+                        option(value='אחר') אחר
+                    else if userDetails.gender == "נקבה"
+                        option(value="זכר") זכר
+                        option(value="נקבה", selected=true) נקבה
+                        option(value="אחר") אחר
+                    else
+                        option(value="זכר") זכר
+                        option(value="נקבה") נקבה
+                        option(value="אחר", selected=true) אחר
+                else
+                    option(value='')
+                    option(value='זכר') זכר
+                    option(value='נקבה') נקבה
+                    option(value='אחר') אחר
+            br
+            br
+            label(for="Bdate") תאריך לידה 
+            br
+            if locals.userDetails
+                input(type="date", name="Bdate", id="Bdate", value=userDetails.birth_date, required="required")
+            else
+                input(type="date", name="Bdate", id="Bdate", required="required")
+            br
+            br
+            label(for="phone_number") טלפון נייד 
+            br
+            if locals.userDetails
+                input(type="tel", name="phone_number", id="phone_number", value=userDetails.phone_number, required="required")
+            else
+                input(type="tel", name="phone_number", id="phone_number", required="required")
+            br
+            br
+            label(for="Password") סיסמה
+            br
+            input(type="password", name="Password", id="Password", autocomplete="new-password", required="required")
+            p(id="pass-error") #{pass_err || ''}
+            label(for="confirm_pass") אימות סיסמה
+            br
+            input(type="password", name="confirm_pass", id="confirm_pass", required="required")
+            p(id="confirm-pass-error") #{confirm_pass_err || ''}
+            button(type="submit", class="button") הרשמ/י

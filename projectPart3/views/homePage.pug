@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="icon", href="graphics/icon.png")
+        script(src="js/pages_validation.js") 
+        title עמוד הבית
+
+    body(class="home-page", dir="rtl", onload="welcomeText()")
+        header
+            a(id="logIn", href="/signIn", class="top-line-left") התחברות
+            nav
+                a(href="/home", class="navline") דף הבית
+                a(href="/signUp", class="navline") הצטרפות
+                a(href="/aboutUs", class="navline") קצת עלינו
+                a(href="/contact", class="navline") צור קשר
+
+        div(class="container")
+            div(class="console-container")
+                span(id="text")
+                div(class="console-underscore", id="console")
+            section(class="sign-page")
+                strong
+                    p(style="text-align: center; color: deeppink; font-size: 2.5vw;") Keep in Touch
+                    p(style="text-align: center; color: deeppink; font-size: 2.5vw;") זו הדרך שלנו לעזור לך לשמור על קשר עם הקרובים לך
+
+
+            
+        footer(class="homePage-footer")
+                div(class="general-footer-container")
+                    img(id="footer-img", src="graphics/site-logo.png", alt="logo of the website", style="padding-left: 0vw;")
+                    ul
+                        li(class="titles") עקבו אחרינו
+                        li
+                            i(class="fa fa-facebook")
+                            a(href="") פייסבוק          
+                        li
+                            i(class="fa fa-instagram")
+                            a(href="") אינסטגרם
+
+                    ul
+                        li(class="titles") דברו איתנו
+                        li
+                            i(class="fa fa-phone")
+                            a(href="") 052-2222221
+                        li
+                            i(class="fa fa-envelope")
+                            a(href="mailto:keepintouch@office.co.il", class="originalLink") keepintouch@office.co.il
+

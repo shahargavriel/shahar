@@ -1,0 +1,26 @@
+extends mainLayout
+block content
+    section(class="sign-page")
+        form(action="/contactEmail", method="post")
+            label(for="fname") שם פרטי
+            br
+            input(type="text", name="fname", id="fname", style="background-color: lightgoldenrodyellow;", required="required")
+            br
+            p(id="fname-error")
+            label(for="lname") שם משפחה
+            br
+            input(type="text", name="lname", id="lname", style="background-color: lightgoldenrodyellow;", required="required")
+            br
+            p(id="lname-error")
+            label(for="Email") אימייל
+            br
+            input(type="email", name="Email", id="Email", style="background-color: lightgoldenrodyellow;", required="required")
+            br
+            br
+            label(for="comment") מה תרצה לכתוב לנו?
+            br
+            textarea(name="comment", id="comment", rows="4", cols="50", style="background-color: lightgoldenrodyellow;", required="required")
+            br
+            br
+            button(type="submit", class="button") שלח/י
+

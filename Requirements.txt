@@ -1,0 +1,38 @@
+Requirements
+
+Modules in use:
+Express, Mysql2, Body- parser, Pug, Path, Cookie- parser, scvtojson  
+
+
+
+
+The creation, insertion, viewing and deletion paths of the tables:
+
+route to create all DB tables:
+app.get('/createAllTables', [CRUDdb.createUsersTable, CRUDdb.createContactsTable, CRUDdb.createContactEventsTable]);
+
+routes to insert data into tables:
+app.get('/insertUsers', CRUDdb.InsertUsersData);
+app.get('/insertUsersContacts', CRUDdb.InsertUserContactsData);
+app.get('/InsertContactsEvents', CRUDdb.InsertContactsEventsData);
+
+route to delete all tables:
+app.get('/dropAllTables', [CRUDdb.dropEventsTable, CRUDdb.dropContactsTable, CRUDdb.dropUsersTable]); 
+
+routes to view the tables:
+app.get('/showUsersData', CRUDdb.ShowUsersTable);
+app.get('/showUsersContactsData', CRUDdb.ShowContactsTable);
+app.get('/ShowEvents', CRUDdb.ShowEventsTable);
+
+
+
+
+The syntax creating tables:
+
+CREATE TABLE IF NOT EXISTS users (email varchar(255) PRIMARY KEY, first_name VARCHAR(255) not null, last_name VARCHAR(255) not null, user_name VARCHAR(255) not null, gender ENUM('זכר', 'נקבה', 'אחר') not null, birth_date date not null, phone_number varchar(10) not null, password varchar(15) not null) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+CREATE TABLE IF NOT EXISTS user_contacts_details (user_email varchar(255), contact_email VARCHAR(255), contact_name varchar(255), phone_number varchar(10) not null, closeness ENUM('1', '2', '3', '4', '5') not null, primary key(user_email, contact_email), CONSTRAINT FK_user_email FOREIGN KEY (user_email) REFERENCES users(email)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+CREATE TABLE IF NOT EXISTS contact_events (user_email varchar(255), contact_email VARCHAR(255), event_type ENUM('יום הולדת', 'מבחן', 'יום נישואים', 'אירוע בריאותי', 'לידה', 'טיסה/נסיעה', 'אחר') not null, event_date date not null, primary key(user_email, contact_email, event_type, event_date), CONSTRAINT FK_emails FOREIGN KEY (user_email, contact_email) REFERENCES user_contacts_details(user_email, contact_email)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+

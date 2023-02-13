@@ -1,0 +1,62 @@
+extends mainLayout
+block content
+    if alert_msg 
+        p #{alert_msg}
+    section(class="sign-page")
+        form(action="/updateUser", method="post")
+            label(for="Email") אימייל
+            br
+            input(type="email", name="Email", id="Email", value=email, style="background-color: darkgrey;", readonly="readonly")
+            br
+            br
+            label(for="fname") שם פרטי
+            br
+            input(type="text", name="fname", id="fname", value=userDetails.first_name, required="required")
+            br
+            p(id="fname-error") #{fname_err || ''}
+            label(for="lname") שם משפחה
+            br
+            input(type="text", name="lname", id="lname", value=userDetails.last_name, required="required")
+            br
+            p(id="lname-error") #{lname_err || ''}
+            label(for="user_name") שם משתמש
+            br
+            input(type="text", name="user_name", id="user_name", value=userDetails.user_name, required="required")
+            p(id="user-name-error") #{username_err || ''}
+            label(for="selectGender") מין 
+            br
+            select(id="selectGender", name="selectGender", style="background-color: white;", required="required")
+                if userDetails.gender == "זכר"
+                    option(value="זכר", selected=true) זכר
+                    option(value="נקבה") נקבה
+                    option(value="אחר") אחר
+                else if userDetails.gender == "נקבה"
+                    option(value="זכר") זכר
+                    option(value="נקבה", selected=true) נקבה
+                    option(value="אחר") אחר
+                else
+                    option(value="זכר") זכר
+                    option(value="נקבה") נקבה
+                    option(value="אחר", selected=true) אחר
+            br
+            br
+            label(for="Bdate") תאריך לידה
+            br
+            input(type="date", name="Bdate", id="Bdate", value=userDetails.birth_date, required="required")
+            br
+            br
+            label(for="phone_number") פלאפון נייד
+            br
+            input(type="tel", name="phone_number", id="phone_number", pattern="[0-9]{3}[0-9]{2}[0-9]{5}", value=userDetails.phone_number, required="required") 
+            br
+            br
+            label(for="Password") סיסמה
+            br
+            input(type="password", name="Password", id="Password", autocomplete="new-password")
+            p(id="pass-error") #{pass_err || ''}
+            label(for="confirm_pass") אימות סיסמה
+            br
+            input(type="password", name="confirm_pass", id="confirm_pass")
+            p(id="confirm-pass-error") #{confirm_pass_err || ''}
+            button(type="submit", class="button") עדכנ/י
+
